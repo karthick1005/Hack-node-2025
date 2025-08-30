@@ -7,6 +7,7 @@ import CardManager from './pages/CardManager';
 import Transactions from './pages/Transactions';
 import Analytics from './pages/Analytics';
 import Settings from './pages/Settings';
+import Notifications from './pages/Notifications';
 import Button from './components/Button';
 import LoadingSpinner from '../../components/LoadingSpinner';
 
@@ -161,6 +162,32 @@ const Page = () => {
             </div>
           </div>
         );
+      case 'notifications':
+        return (
+          <div className="flex-1 flex flex-col">
+            <header className="bg-white border-b border-gray-200 p-4 lg:p-6">
+              <div className="flex items-center gap-4">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="lg:hidden"
+                  onClick={() => setIsMobileSidebarOpen(true)}
+                >
+                  <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                </Button>
+                <h1 className="text-xl lg:text-2xl font-bold text-gray-900">Notifications</h1>
+              </div>
+            </header>
+            <div className="flex-1 overflow-auto">
+              <Notifications
+                {...commonProps}
+                onMobileSidebarOpen={() => setIsMobileSidebarOpen(true)}
+              />
+            </div>
+          </div>
+        );
       case 'settings':
         return (
           <div className="flex-1 flex flex-col">
@@ -243,7 +270,7 @@ const Page = () => {
       </div>
 
       {/* Context Indicator */}
-      <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-3 z-50">
+      {/* <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-3 z-50">
         <div className="text-xs text-gray-500 mb-1">Current Context</div>
         <div className="text-sm font-medium">
           {currentContext?.location?.name || 'Unknown Location'}
@@ -251,7 +278,7 @@ const Page = () => {
         <div className="text-xs text-gray-400">
           {new Date(currentContext?.time || Date.now()).toLocaleTimeString()}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
