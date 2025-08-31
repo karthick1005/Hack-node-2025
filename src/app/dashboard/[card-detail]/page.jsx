@@ -360,10 +360,10 @@ const CardDetailsPage = () => {
                 className="w-full flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-md hover:shadow-lg"
               >
                 <ArrowUpRight className="h-4 w-4 mr-2" />
-                Make BlockDAG Payment
+                Make Payment
               </button>
               <p className="text-xs text-gray-500 mt-2 text-center">
-                Transfer BDAG tokens using this card
+                Transfering Money Through this card
               </p>
             </div>
           </div>
