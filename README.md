@@ -1,4 +1,4 @@
-# Block DAG 2025 - Smart Card Management System
+# Hack Node 2025 - Smart Card Management System
 
 ## 🌟 Overview
 
